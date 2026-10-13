@@ -128,7 +128,12 @@ def build_cart_link(a):
     bad = [c for c in checked if not c["exists"]]
     if bad: return {"store": store, "ok": False, "error": "unknown variant ids", "items": checked}
     link = f"{base}/cart/" + ",".join(f"{c['variant_id']}:{c['quantity']}" for c in checked)
-    if REF: link += f"?ref={REF}&utm_source={REF}&utm_medium=ai_agent&utm_campaign=agent_cart"
+    if REF:
+        # ref -> order Conversion summary referral code; utm_* -> customer journey; attributes[] -> order Notes
+        # (attributes are stored on the cart/order itself, so they survive even if analytics consent drops the session).
+        q = [("ref", REF), ("utm_source", REF), ("utm_medium", "ai_agent"), ("utm_campaign", "agent_cart"),
+             ("attributes[agent_source]", REF), ("attributes[agent_channel]", "ai_agent")]
+        link += "?" + urllib.parse.urlencode(q)
     return {"store": store, "ok": True, "cart_url": link, "items": checked,
             "estimated_subtotal": round(sum((c["price"] or 0) * c["quantity"] for c in checked), 2),
             "instructions": "Give this link to the shopper. Opening it pre-fills the cart and goes to the store's own checkout, where they review it and pay. Nothing has been ordered.",

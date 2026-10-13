@@ -28,7 +28,7 @@ class Live(unittest.TestCase):
         p = call("get_product", {"store": store, "handle": res[0]["handle"]})["structuredContent"]
         v = next(x for x in p["variants"] if x["available"])
         c = call("build_cart_link", {"store": store, "items": [{"variant_id": v["variant_id"], "quantity": 2}]})["structuredContent"]
-        self.assertTrue(c["ok"]); self.assertIn(f"/cart/{v['variant_id']}:2?ref=shelfready&utm_source=shelfready", c["cart_url"])
+        self.assertTrue(c["ok"]); self.assertIn(f"/cart/{v['variant_id']}:2?ref=shelfready&utm_source=shelfready", c["cart_url"]); self.assertIn("attributes%5Bagent_source%5D=shelfready", c["cart_url"])
         self.assertTrue(call("get_policies", {"store": store, "which": ["refund"]})["structuredContent"]["policies"]["refund"].get("excerpt"))
         return c
     def test_allbirds(self): self.flow("allbirds.com", "mens wool runner")

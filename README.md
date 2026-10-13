@@ -46,3 +46,6 @@ Demo: `demo_transcript.json` (real live run, 2026-10-13 1:36 AM CT), image `make
 
 ## Limits
 Works only where `/products.json` is public. That rules out headless/locked stores like Bombas, SKIMS and Ruggable until they use the fix kit. Prices come in the store's default currency. Cart permalinks don't guarantee stock. Not deployed. No partner agreements with Shopify or any merchant.
+
+## Attribution (verified 2026-10-13)
+Cart links carry `ref`, `utm_*`, and `attributes[agent_source|agent_channel]`. Live curl test against allbirds.com: the `/cart/...` 302 to Shopify checkout preserves all three; the checkout token's `landing_page` holds the full query. Per Shopify docs (shopify.dev/docs/apps/build/checkout/create-cart-permalinks): `ref` shows as the referral code in the order Conversion summary (Admin API `customerJourneySummary.*.referralCode`), `attributes`/`note` appear in order Notes. Not verified on a real placed order (needs a store we control). True Sales-by-Channel attribution needs `access_token` + `source_name` from a sales-channel app.
