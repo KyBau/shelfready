@@ -1,0 +1,27 @@
+# Render Blueprint (free plan). Default = public demo connector for allbirds.com.
+# Merchant install: set SHELFREADY_STORE to your domain and SHELFREADY_ALLOW_ANY_STORE to "0".
+services:
+  - type: web
+    name: shelfready-mcp
+    runtime: python
+    plan: free
+    buildCommand: "echo no dependencies"
+    startCommand: "python3 server.py --http"
+    healthCheckPath: /healthz
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: SHELFREADY_STORE
+        value: allbirds.com
+      - key: SHELFREADY_STORE_NAME
+        value: Allbirds
+      - key: SHELFREADY_ALLOW_ANY_STORE
+        value: "1"          # demo: any store via the 'store' arg. Merchant installs: "0" (locked)
+      - key: SHELFREADY_COLLECTIONS
+        value: ""           # optional comma-separated collection handles to limit what agents see
+      - key: SHELFREADY_REF
+        value: shelfready   # cart links get ?ref=<this>&utm_source=<this>&utm_medium=ai_agent
+      - key: SHELFREADY_ALLOWED_ORIGINS
+        value: https://claude.ai,https://claude.com,https://grok.com,https://muse.ai

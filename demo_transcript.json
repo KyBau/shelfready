@@ -1,0 +1,126 @@
+{
+ "prompt": "Find me men's wool runners under $120 at Allbirds in size 10 and give me a checkout link.",
+ "initialize": "2026-07-28",
+ "search": {
+  "store": "allbirds.com",
+  "query": "mens wool runner",
+  "total_matches": 95,
+  "results": [
+   {
+    "handle": "mens-wool-runners",
+    "title": "Men's Wool Runner - Natural Grey (Light Grey Sole)",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "price_min": 110.0,
+    "price_max": 110.0,
+    "available": true,
+    "variant_count": 7,
+    "url": "https://allbirds.com/products/mens-wool-runners"
+   },
+   {
+    "handle": "mens-wool-runner-nz-natural-black",
+    "title": "Men's Wool Runner NZ - Natural Black (Natural Black Sole)",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "price_min": 110.0,
+    "price_max": 110.0,
+    "available": true,
+    "variant_count": 14,
+    "url": "https://allbirds.com/products/mens-wool-runner-nz-natural-black"
+   },
+   {
+    "handle": "mens-wool-runner-nz-natural-black-blizzard",
+    "title": "Men's Wool Runner NZ - Natural Black (Blizzard Sole)",
+    "vendor": "Allbirds",
+    "product_type": "Shoes",
+    "price_min": 110.0,
+    "price_max": 110.0,
+    "available": true,
+    "variant_count": 14,
+    "url": "https://allbirds.com/products/mens-wool-runner-nz-natural-black-blizzard"
+   }
+  ],
+  "note": "Searches the first 1,000 products of the public catalog."
+ },
+ "product": {
+  "title": "Men's Wool Runner - Natural Grey (Light Grey Sole)",
+  "url": "https://allbirds.com/products/mens-wool-runners"
+ },
+ "variants": [
+  {
+   "variant_id": 31338073981072,
+   "title": "8",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": false,
+   "sku": "WR3MNCW080"
+  },
+  {
+   "variant_id": 31330825109584,
+   "title": "9",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": true,
+   "sku": "WR3MNCW090"
+  },
+  {
+   "variant_id": 30674260033616,
+   "title": "10",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": true,
+   "sku": "WR3MNCW100"
+  },
+  {
+   "variant_id": 30674264817744,
+   "title": "11",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": true,
+   "sku": "WR3MNCW110"
+  },
+  {
+   "variant_id": 30750381375568,
+   "title": "12",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": false,
+   "sku": "WR3MNCW120"
+  },
+  {
+   "variant_id": 31223893393488,
+   "title": "13",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": true,
+   "sku": "WR3MNCW130"
+  },
+  {
+   "variant_id": 31243626741840,
+   "title": "14",
+   "price": 110.0,
+   "compare_at_price": null,
+   "available": false,
+   "sku": "WR3MNCW140"
+  }
+ ],
+ "cart": {
+  "store": "allbirds.com",
+  "ok": true,
+  "cart_url": "https://allbirds.com/cart/30674260033616:1",
+  "items": [
+   {
+    "variant_id": 30674260033616,
+    "quantity": 1,
+    "exists": true,
+    "available": true,
+    "title": "Men's Wool Runner - Natural Grey (Light Grey Sole) - 10",
+    "price": 110.0
+   }
+  ],
+  "estimated_subtotal": 110.0,
+  "instructions": "Give this link to the shopper. Opening it pre-fills the cart and goes to the store's own checkout, where they review it and pay. Nothing has been ordered.",
+  "warnings": []
+ },
+ "refund": "Our standard return policy is 30 days. You can return or exchange items that are unworn and unwashed with original product tags attached within 30 days from the date your order was delivered. For sock"
+}
